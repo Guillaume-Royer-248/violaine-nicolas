@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Violaine & Nicolas — 20 juin 2026</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="hero" id="top">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">Le mariage de</p>
+
+            <h1 class="hero-title">
+                <span class="hero-name">Violaine</span>
+                <span class="hero-amp">&amp;</span>
+                <span class="hero-name">Nicolas</span>
+            </h1>
+
+            <div class="hero-divider" aria-hidden="true">
+                <span class="line"></span>
+                <span class="diamond"></span>
+                <span class="line"></span>
+            </div>
+
+            <p class="date">20 juin 2026</p>
+
+            <p class="subtitle">
+                Une journée, des émotions,<br>
+                des souvenirs à parcourir.
+            </p>
+
+            <a href="#galerie" class="btn-scroll">
+                <span>Entrer dans la galerie</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14" />
+                    <path d="m19 12-7 7-7-7" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="#top" class="logo">V <span class="logo-amp">&amp;</span> N</a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="links" id="navLinks">
+            <div class="nav-item">
+                <a href="#vendredi">Vendredi</a>
+                <div class="dropdown">
+                    <a href="#vendredi-domaine">Préparation du domaine</a>
+                    <a href="#vendredi-repas">La veille du mariage</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="#samedi">Samedi</a>
+                <div class="dropdown">
+                    <a href="#samedi-preparatifs">Préparatifs & découverte</a>
+                    <a href="#mairie">La mairie</a>
+                    <a href="#cocktail">Le cocktail & le déjeuner</a>
+                    <a href="#ceremonie">La cérémonie laïque</a>
+                    <a href="#soiree">La soirée</a>
+                </div>
+            </div>
+
+            <a href="#top">Accueil</a>
+        </div>
+
+        <div class="nav-progress">
+            <div class="nav-progress-bar" id="navProgressBar"></div>
+        </div>
+    </nav>
+
+    <div class="nav-backdrop" id="navBackdrop"></div>
+
+    <main id="galerie">
+
+        <section id="vendredi" class="section">
+            <h2>Vendredi</h2>
+
+            <div class="card" id="vendredi-domaine">
+                <h3>Préparation du domaine</h3>
+                <p>Les derniers préparatifs avant le grand jour.</p>
+                <div class="thumbs" data-gallery="vendredi-domaine"></div>
+                <button class="download-btn" onclick="downloadGallery('vendredi-domaine', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+
+            <div class="card" id="vendredi-repas">
+                <h3>La veille du mariage</h3>
+                <p>Un moment de convivialité pour lancer les festivités.</p>
+                <div class="thumbs" data-gallery="vendredi-repas"></div>
+                <button class="download-btn" onclick="downloadGallery('vendredi-repas', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+        </section>
+
+        <section id="samedi" class="section">
+            <h2>Samedi</h2>
+
+            <div class="card" id="samedi-preparatifs">
+                <h3>Les préparatifs & la découverte</h3>
+                <p>Les instants précédant la cérémonie, jusqu'au premier regard.</p>
+                <div class="thumbs" data-gallery="samedi-preparatifs"></div>
+                <button class="download-btn" onclick="downloadGallery('samedi-preparatifs', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+
+            <div class="card" id="mairie">
+                <h3>La mairie</h3>
+                <div class="thumbs" data-gallery="mairie"></div>
+                <button class="download-btn" onclick="downloadGallery('mairie', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+
+            <div class="card" id="cocktail">
+                <h3>Le cocktail & le déjeuner</h3>
+                <div class="thumbs" data-gallery="cocktail"></div>
+                <button class="download-btn" onclick="downloadGallery('cocktail', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+
+            <div class="card" id="ceremonie">
+                <h3>La cérémonie laïque</h3>
+                <div class="thumbs" data-gallery="ceremonie"></div>
+                <button class="download-btn" onclick="downloadGallery('ceremonie', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+
+            <div class="card" id="soiree">
+                <h3>La soirée</h3>
+                <div class="thumbs" data-gallery="soiree"></div>
+                <button class="download-btn" onclick="downloadGallery('soiree', event)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Télécharger
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="lightbox" class="lightbox hidden">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="nav-lightbox">
+            <button id="prev">←</button>
+            <button id="next">→</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="js/photos.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/app.js"></script>
+
+    <button id="toTop">↑</button>
+</body>
+
+</html>
