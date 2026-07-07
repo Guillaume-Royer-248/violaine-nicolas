@@ -1,0 +1,7 @@
+node_modules
+photos
+thumbs
+package.json
+package-lock.json
+generate-thumbnails.js
+.git
