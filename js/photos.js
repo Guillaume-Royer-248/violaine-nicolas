@@ -25,3 +25,20 @@ const GALLERIES = {
       return `${BASE_URL}/photos/soiree/${prefix}-${String(num).padStart(2, "0")}.jpg`;
     })
   };
+
+/**
+ * Construit l'URL de la miniature (WebP, légère) à partir de l'URL de la photo
+ * en pleine résolution.
+ *
+ * Suppose que les miniatures sont rangées dans un dossier "thumbs/" qui reproduit
+ * exactement l'arborescence de "photos/" sur le bucket R2, avec l'extension .webp.
+ * Exemple :
+ *   .../photos/mairie/260620-160.jpg  →  .../thumbs/mairie/260620-160.webp
+ *
+ * Voir generate-thumbnails.js pour générer ce dossier "thumbs/" automatiquement.
+ */
+function getThumbUrl(fullUrl) {
+  return fullUrl
+    .replace("/photos/", "/thumbs/")
+    .replace(/\.jpe?g$/i, ".webp");
+}
