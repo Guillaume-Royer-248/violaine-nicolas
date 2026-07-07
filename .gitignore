@@ -1,3 +1,10 @@
 node_modules/
 /photos
 /thumbs
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

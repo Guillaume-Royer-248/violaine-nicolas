@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.107.0"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   }
 }
