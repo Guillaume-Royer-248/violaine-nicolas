@@ -1,0 +1,79 @@
+/* =========================
+   GALERIES
+========================= */
+
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Image miniature */
+.thumbs img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: scale(0.98);
+    animation: fadeIn 0.4s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.4s ease;
+}
+
+/* effet hover premium */
+.thumbs img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* animation d’apparition */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+     AMÉLIORATION CARTES
+  ========================= */
+
+.card {
+    overflow: hidden;
+    position: relative;
+}
+
+/* petit séparateur visuel */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+     TITRES SECTION
+  ========================= */
+
+.section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #b28c63;
+}
